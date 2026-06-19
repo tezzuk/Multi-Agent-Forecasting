@@ -236,6 +236,8 @@ with tab1:
                      xaxis=dict(range=[results.index[0], last + pd.Timedelta(days=240)]),
                      **PLOTLY_LAYOUT)
     st.plotly_chart(eq, use_container_width=True)
+    st.caption("💡 The four individual agents are hidden to keep the chart clean — "
+               "**click an agent's name in the legend** to show its curve.")
 
     st.info(
         f"**Reading this:** Buy & Hold turned \\$10k into **\\${bh_final:,.0f}** "
